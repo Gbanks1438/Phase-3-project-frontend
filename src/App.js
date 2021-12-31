@@ -1,72 +1,60 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from "react-router-dom"; //Navigate
+// import { useEffect, useState } from 'react';
 
-import { useEffect, useState } from 'react';
-
-import UserCard from './UserCard';
-
-
-
+import Header from './Components/Header';
+import About from './Components/About';
+import Reservations from './Components/Reservations';
+import Rooms from './Components/Rooms';
+import AroundTown from './Components/AroundTown.js';
 
 function App() {
+  // const [ reservations, setReservations ] = useState( [] )
+  // console.log("Our Reservations ->", reservations)
 
+  // useEffect( 
+  //   ()=>{
+                //// fetch example from instructions
+                    //// fetch("http://localhost:9292/test")
+                    //// .then((r) => r.json())
+                    //// .then((data) => console.log(data));
 
-  const [ users, setUsers ] = useState( [] )
-  console.log("State Of Our  users ->", users)  //
+  //     fetch("http://localhost:8888/reservations")
+  //     .then( r => r.json() )
+  //     .then( 
 
+  //       (fetchedReservationsArray)=>{ console.log("fetchedReservationsArray: ", fetchedReservationsArray) 
 
-  useEffect( 
-    
-    ()=>{
+  //         setReservations( [ ...fetchedReservationsArray ]  )
 
-      fetch("http://localhost:9292/users")
-      .then( r => r.json() )
-      .then( 
-
-        (fetchedUserArrayOfObjs)=>{ console.log("fetchedUserArrayOfObjs: ", fetchedUserArrayOfObjs) 
-
-          setUsers( [ ...fetchedUserArrayOfObjs ]  )
-
-        }
+  //       }
         
-      )
+  //     )
 
-    }
+  //   }
   
-  , [] )
-
+  // , [] )
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-
-
-        <h1>Hello User's From The Backend! 🙌 :)</h1>
-        {
-
-          users.map( 
-
-            (eachUser)=>{
-
-              return( <UserCard 
-                
-                key={eachUser.id} // For React  🤖
-                userProp={eachUser} // For Us  :)
-                
-              /> )
-
-            }
-
-           )
-
-        }
-
-
-      </header>
+      <Header />
+      <Routes>
+          <Route path='/about' element={<About />} />
+          <Route path='/around_town' element={<AroundTown />} />
+          <Route path='/rooms' element={<Rooms />} />
+          <Route path='/reservations' element={<Reservations />} />     
+      </Routes>
+      
+     {/* {
+       reservations.map( 
+         (eachReservation)=>{
+           return( <Reservations 
+            key={eachReservation.id} // For React  🤖
+            reservationsProp={eachReservations} // For Us  :)
+            /> )
+          }
+          )
+        } */}
     </div>
   );
 }
