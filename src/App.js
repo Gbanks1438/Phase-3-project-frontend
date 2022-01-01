@@ -39,6 +39,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
+          <Route path='/' element={<About />} />
           <Route path='/about' element={<About />} />
           <Route path='/around_town' element={<AroundTown />} />
           <Route path='/rooms' element={<Rooms />} />

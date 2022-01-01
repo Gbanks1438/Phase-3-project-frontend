@@ -5,16 +5,16 @@ function Header() {
         <header className="App-header">
         <nav>
             <ul>
-                <li>
-                    <NavLink to='/about'>Home</NavLink>
+                <li className='nav-links'>
+                    <NavLink to='/about'>About Us</NavLink>
                 </li>
-                <li>
+                <li className='nav-links'>
                     <NavLink to='/around_town'>Around Town</NavLink>
                 </li>
-                <li>
+                <li className='nav-links'>
                     <NavLink to='/rooms'>Rooms</NavLink>
                 </li>
-                <li>
+                <li className='nav-links'>
                     <NavLink to='/reservations'>Reservations</NavLink> 
                 </li>
             </ul>
