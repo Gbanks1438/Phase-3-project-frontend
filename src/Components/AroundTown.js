@@ -10,6 +10,8 @@ function AroundTown() {
                         <li>
                         FOOD & DRINK
                             <ul>
+                                <li></li>
+                                <li></li>
                                 <li>The Towne Tavern</li>
                                 <li>Beer Deviner</li>
                                 <li>AJ's Pizza</li>
@@ -45,6 +47,8 @@ function AroundTown() {
                         <li>
                         ACTIVITES
                             <ul>
+                                <li></li>
+                                <li></li>
                                 <li>Visit June Farms</li>
                                 <li>Visit Winding Creek Farm</li>
                                 <li>Play golf at the Troy Country Club</li>
@@ -62,6 +66,8 @@ function AroundTown() {
                         <li>
                         PARKS
                             <ul>
+                                <li></li>
+                                <li></li>
                                 <li>Cherry Plains</li>
                                 <li>Schodack Island State Park</li>
                                 <li>Peebles Island State Park</li>
@@ -84,6 +90,8 @@ function AroundTown() {
                         <li>
                         SHOPS
                             <ul>
+                                <li></li>
+                                <li></li>
                                 <li>Cumberland Farms Gas Station</li>
                                 <li>Stewarts Shop</li>
                                 <li>Hannaford Supermarket</li>

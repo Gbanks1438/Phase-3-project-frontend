@@ -54,6 +54,10 @@ a:active {
   }
 }
 
+h2 {
+  margin-bottom: 0px;
+}
+
 .green-neon-text {
   color: forestgreen;
   text-shadow:
