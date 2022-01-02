@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, Routes } from "react-router-dom"; //Navigate
+import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from 'react';
 
 import Header from './Components/Header';
@@ -23,7 +23,6 @@ function App() {
         )
       }
     , [] )
-  // console.log("Check Our Rooms Again->", rooms)
 
   const [ reservations, setReservations ] = useState( [] )
   // console.log("Our Reservations ->", reservations)
@@ -38,7 +37,6 @@ function App() {
         )
       }
     , [] )
-  // console.log("Check Our Reservations Again->", reservations)
   
   return (
     <div className="App">
@@ -47,14 +45,8 @@ function App() {
           <Route path='/' element={<About />} />
           <Route path='/about' element={<About />} />
           <Route path='/around_town' element={<AroundTown />} />
-          <Route path='/rooms' element={
-          <Rooms 
-          roomsList={rooms}
-          />} />
-          <Route path='/reservations' element={
-          <Reservations 
-          reservationsList={reservations}
-          />} />     
+          <Route path='/rooms' element={<Rooms rooms={rooms}/>} />
+          <Route path='/reservations' element={<Reservations reservations={reservations}/>} />     
       </Routes>
 
     </div>

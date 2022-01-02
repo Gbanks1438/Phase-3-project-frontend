@@ -8,11 +8,9 @@ function About() {
         <img src={logo} className="App-logo" alt="logo" />
         <br/>
         <br/>
-        <br/>
         <div>
           <h1 class="green-neon-text">Fox Hill Lodge</h1>
           <h4 class="green-neon-text">Located on Big Bowman Pond in upstate NY.</h4>
-          <br/>
           <br/>
           <p class="blue-shadow">Our camp is avilable to family and friends for weekends, getaways, and holiday excursions.</p>
           <p class="blue-shadow">We have everything available for kayaking, hiking, swimming, and fishing.</p>
