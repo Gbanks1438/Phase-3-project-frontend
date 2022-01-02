@@ -1,18 +1,16 @@
 .App {
   text-align: center;
-}
-
-.App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
 }
 
+/* .App-header {
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+} */
+
 .nav-links {
   display: inline;
-  padding: 140px;
+  padding: 150px;
 }
 
 a:link {
@@ -56,33 +54,23 @@ a:active {
   }
 }
 
-.div-text {
-  color: #093369;
-  font-size: calc(14px + 1vmin);
-  font-weight: bold;
-  background-color:#04D4F0;
-  opacity: 80%;
-  max-width: 85%;
-  margin: 0 auto;
-}
-
 .green-neon-text {
   color: forestgreen;
   text-shadow:
-      0 0 3px #fff,
-      0 0 7px #fff,
-      0 0 11px #fff,
-      0 0 33px #0fa,
-      0 0 65px #0fa,
-      0 0 83px #0fa,
-      0 0 101px #0fa,
-      0 0 133px #0fa;
+  0 0 3px #fff,
+  0 0 7px #fff,
+  0 0 11px #fff,
+  0 0 33px #0fa,
+  0 0 65px #0fa,
+  0 0 83px #0fa,
+  0 0 101px #0fa,
+  0 0 133px #0fa;
 }
 
 .blue-shadow {
   color: #04D4F0;
   font-weight: bold;
-  font-size: calc(8px + 1vmin);
+  font-size: calc(12px + 1vmin);
   text-shadow: 
   2px 2px black,
   4px 4px black,
@@ -90,12 +78,34 @@ a:active {
   8px 8px black;
 }
 
-.lists {
-  text-align: left;
+.div-text {
+  color: #021d4b;
+  font-size: calc(8px + 2vmin);
+  font-weight: bold;
+  background-color:#04D4F0;
+  opacity: 80%;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+ul {
+  padding-left: 0px;
+}
+
+li {
+  display: block;
+  padding: 10px;
+  padding-left: 0px;
+  text-align: center;
+}
+
+.all-lists {
   display: flex;
 }
 
 .list-container {
-  max-width: 20%;
+  max-width: 25%;
   display: flex;
+  margin-left: 2%;
 }

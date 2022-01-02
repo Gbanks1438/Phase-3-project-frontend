@@ -2,27 +2,13 @@ function AroundTown() {
   
     return (
         <div className="div-text">
-            <h2>What's Nearby?</h2>
+            <h2>What's Around?</h2>
             <br/>
-                <div className="lists">
+                <div className="all-lists">
                     <div className="list-container">
                     <ul>
                         <li>
-                        Quick Convenience
-                            <ul>
-                                <li>Cumberland Farms Gas Station</li>
-                                <li>Stewarts Shop</li>
-                                <li>Hannaford Supermarket</li>
-                                <li>Heller's Wine & Liquor Warehouse</li>
-                                <li>Tremont Lumber & Hardware</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    </div>
-                    <div className="list-container">
-                    <ul>
-                        <li>
-                        Places to eat & drink
+                        FOOD & DRINK
                             <ul>
                                 <li>The Towne Tavern</li>
                                 <li>Beer Deviner</li>
@@ -57,7 +43,7 @@ function AroundTown() {
                     <div className="list-container">
                     <ul>
                         <li>
-                        Things to do
+                        ACTIVITES
                             <ul>
                                 <li>Visit June Farms</li>
                                 <li>Visit Winding Creek Farm</li>
@@ -74,7 +60,7 @@ function AroundTown() {
                     <div className="list-container">
                     <ul>
                         <li>
-                        Parks
+                        PARKS
                             <ul>
                                 <li>Cherry Plains</li>
                                 <li>Schodack Island State Park</li>
@@ -89,6 +75,25 @@ function AroundTown() {
                                 <li>Albany Corning Preserve</li>
                                 <li>Kinderhook Creek Preserve</li>
                                 <li>Cohoes Falls Overlook Park</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </div>
+                    <div className="list-container">
+                    <ul>
+                        <li>
+                        SHOPS
+                            <ul>
+                                <li>Cumberland Farms Gas Station</li>
+                                <li>Stewarts Shop</li>
+                                <li>Hannaford Supermarket</li>
+                                <li>ShopRite Supermarket</li>
+                                <li>Heller's Wine & Liquor Warehouse</li>
+                                <li>Walmart</li>
+                                <li>Target</li>
+                                <li>The Home Depot</li>
+                                <li>MowHawk Army/Navy</li>
+                                <li>Tremont Lumber & Hardware</li>
                             </ul>
                         </li>
                     </ul>

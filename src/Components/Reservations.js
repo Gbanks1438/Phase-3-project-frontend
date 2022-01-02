@@ -18,7 +18,7 @@ function Reservations() {
 
     return (
         <div className="div-text">
-            <p>Reservations Text</p>
+            <p>-👷----🚧UNDER CONSTRUCTION🚧----👷-</p>
             <p>This page should have each reservation from the API we fetch rendered to a card with it's details.</p>
             <h3>Confirm your Reservation!</h3>
             <p>form with button</p>
