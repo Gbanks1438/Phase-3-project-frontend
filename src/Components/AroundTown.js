@@ -68,7 +68,7 @@ function AroundTown() {
                             <ul>
                                 <li></li>
                                 <li></li>
-                                <li>Cherry Plains</li>
+                                <li>Cherry Plain State Park</li>
                                 <li>Schodack Island State Park</li>
                                 <li>Peebles Island State Park</li>
                                 <li>John Boyd Thacher State Park</li>
@@ -96,7 +96,7 @@ function AroundTown() {
                                 <li>Stewarts Shop</li>
                                 <li>Hannaford Supermarket</li>
                                 <li>ShopRite Supermarket</li>
-                                <li>Heller's Wine & Liquor Warehouse</li>
+                                <li>Heller's Wine & Liquor</li>
                                 <li>Walmart</li>
                                 <li>Target</li>
                                 <li>The Home Depot</li>

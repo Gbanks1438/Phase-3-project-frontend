@@ -1,4 +1,5 @@
-function Reservations() {
+function Reservations(props) {
+    console.log("props: ", props)
   
     // const handleSubmit = (e) => {
     //     // e.preventDefault();
@@ -19,7 +20,19 @@ function Reservations() {
     return (
         <div className="div-text">
             <p>-👷----🚧UNDER CONSTRUCTION🚧----👷-</p>
-            <p>This page should have each reservation from the API we fetch rendered to a card with it's details.</p>
+            {/* <div>
+                   {
+       reservations.map( 
+         (eachReservation)=>{
+           return( <Reservations 
+            key={eachReservation.id} // For React  🤖
+            reservationsProp={eachReservations} // For Us  :)
+            /> )
+          }
+          )
+        }
+            </div> */}
+            
             <h3>Confirm your Reservation!</h3>
             <p>form with button</p>
             {/* <form onSubmit={handleSubmit}>
@@ -63,6 +76,7 @@ function Reservations() {
             { !isPending &&<button>Submit You Reservation!</button>}
             { isPending &&<button disabled>Checking availability...</button>}
             </form> */}
+
         </div>
     );
 }

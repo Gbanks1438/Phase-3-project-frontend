@@ -1,5 +1,6 @@
-function Rooms() {
-  
+function Rooms(props) {
+  console.log("props: ", props)
+
     return (
         <div className="div-text">
             <p>The house features expansive water views, 5 fireplaces, 5 bedrooms, and a 3 car garage.</p>
@@ -12,8 +13,20 @@ function Rooms() {
             <p>There is also a game room with a full sized pool table and a full kitchen.</p>
             <p>Off the back of the house is a ground level screened in porch with an outdoor shower.</p>
             <br/>
-            <p>-👷----🚧UNDER CONSTRUCTION🚧----👷-</p>
-            <p>This page should have each room from the API we fetch rendered to a card with it's details.</p>
+            {/* <p>-👷----🚧UNDER CONSTRUCTION🚧----👷-</p> */}
+            {/* <div>
+                    {
+       rooms.map( 
+         (eachRoom)=>{
+           return( <Rooms 
+            key={eachRoom.id} // For React  🤖
+            roomsProp={eachRoom} // For Us  :)
+            /> )
+          }
+          )
+        }
+            </div> */}
+
         </div>
     );
 }
