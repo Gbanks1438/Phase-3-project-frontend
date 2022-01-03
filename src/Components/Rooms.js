@@ -1,3 +1,5 @@
+import RoomCard from './RoomCard.js';
+
 function Rooms({rooms}) { 
 // console.log(rooms[0].has_ensuite)
     return (
@@ -11,26 +13,12 @@ function Rooms({rooms}) {
         </div>
                 {rooms.map((eachRoom)=>{
                      return ( 
-                        <table>
-                            <thead>
-                            <tr>
-                                <th>Room Number</th>
-                                <th>Floor</th>
-                                <th>Number of beds</th>
-                                <th>Bed Size</th>
-                                <th>Ensuite available</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>{eachRoom.id}</td>
-                                <td>{eachRoom.floor_number}</td>
-                                <td>{eachRoom.num_of_beds}</td>
-                                <td>{eachRoom.bed_size}</td>
-                                <td>{eachRoom.has_ensuite}</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                         <div> 
+                     <RoomCard
+                        key={eachRoom.id} // For React
+                        aRoom={eachRoom} // For Us
+                        />
+                        </div>  
                         )
                      }   )
                  }

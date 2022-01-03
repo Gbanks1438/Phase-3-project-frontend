@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import About from './Components/About';
 import Reservations from './Components/Reservations';
 import Rooms from './Components/Rooms';
+import RoomCard from './Components/RoomCard';
 import AroundTown from './Components/AroundTown.js';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/around_town' element={<AroundTown />} />
           <Route path='/rooms' element={<Rooms rooms={rooms}/>} />
+          <Route path='/room_card' element={<RoomCard />} />
           <Route path='/reservations' element={<Reservations reservations={reservations}/>} />     
       </Routes>
     </div>

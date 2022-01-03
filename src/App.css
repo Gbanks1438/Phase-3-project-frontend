@@ -87,7 +87,7 @@ h2 {
   font-size: calc(8px + 2vmin);
   font-weight: bold;
   background-color:#04D4F0;
-  opacity: 80%;
+  /* opacity: 80%; */
   width: 90%;
   margin: 0 auto;
   padding: 10px;
