@@ -146,11 +146,12 @@ table {
   background-color:#04D4F0;
   margin: auto;
   padding: 10px;
-  width: 90%;
+  width: 91%;
   height: 190px;
 }
 
 th, td {
-  border: 2px solid black;
+  border: 2px solid #021d4b;
   padding: 25px;
+  width: 140px;
 }

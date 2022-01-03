@@ -1,8 +1,5 @@
-function Reservations(props) {
-    console.log("reservations: ", props.reservations)
-
-    // map over props.reservations to get to the key/values
-
+function Reservations({reservations}) {
+    console.log("reservations: ", reservations)
 
     // const handleSubmit = (e) => {
 
