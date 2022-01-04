@@ -1,5 +1,5 @@
-function RoomCard({aRoom}) { 
-
+function RoomCard({aRoom}, {printEnsuite}) { 
+// console.log(aRoom)
         return (
             <div>
                  <table>

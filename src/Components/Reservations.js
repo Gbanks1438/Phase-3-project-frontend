@@ -1,3 +1,5 @@
+import ReservationCard from './ReservationCard.js';
+
 function Reservations({reservations}) {
     console.log("reservations: ", reservations)
 
@@ -20,58 +22,75 @@ function Reservations({reservations}) {
 
     return (
         <div className="div-text">
-            <p>-👷----🚧UNDER CONSTRUCTION🚧----👷-</p>
-            <p>Add a div with cards to display existing reservations here</p>
-
-                        <div className="form-div">
-                            <form>
-                                {/* add to form tag above --> onSubmit={handleSubmit} */}
-                                <label>Hotel:</label>
-                                <input
-                                    type="text"
-                                    required
-                                    // value={eachReservation.hotel_id}
-                                    // onChange={(e) => setHotel_id(e.target.value)}
-                                    />
-                                <br/>
-                                <label>Member:</label>
-                                <input
-                                    type="text"
-                                    required
-                                    // value={eachReservation.guest_id}
-                                    // onChange={(e) => setGuest_id(e.target.value)}
-                                    />
-                                <br/>
-                                <label>Room:</label>
-                                <input
-                                    type="text"
-                                    required
-                                    // value={eachReservation.room_id}
-                                    // onChange={(e) => setRoom_id(e.target.value)}
-                                    />
-                                <br/>
-                                <label>Arriving:</label>
-                                <input
-                                    type="text"
-                                    required
-                                    // value={eachReservation.date_start}
-                                    // onChange={(e) => setDate_start(e.target.value)}
-                                    />
-                                    <br/>
-                                <label>Checking Out:</label>
-                                <input
-                                    type="text"
-                                    required
-                                    // value={eachReservation.date_end}
-                                    // onChange={(e) => setDate_end(e.target.value)}
-                                    />
-                                <br/>
-                                <input type="submit" value="Submit"/>
-                            {/* { !isPending &&<button>Submit</button>}
-                            { isPending &&<button disabled>Confirming Reservation...</button>} */}
-                            </form>
-                        </div>
-                    {/* );})} */}
+            <h2>Reservations List</h2>
+            <br/>
+            <div>
+                {reservations.map((eachReservation)=>{
+                     return ( 
+                         <div> 
+                     <ReservationCard
+                        key={eachReservation.id} // For React
+                        aReservation={eachReservation} // For Us
+                        />
+                        </div>  
+                        )
+                     }   )
+                }
+            </div>  
+        <h2>Make A Reservation</h2>
+            <br/>
+                <div>
+                    <form>
+                    {/* add to form tag above --> onSubmit={handleSubmit} */}
+                        <label>Hotel:</label>
+                        <input
+                            type="text"
+                            required
+                            value="1"
+                            // {eachReservation.hotel_id}
+                            // onChange={(e) => setHotel_id(e.target.value)}
+                        />
+                    <br/>
+                        <label>Member:</label>
+                        <input
+                            type="text"
+                            required
+                            value="5"
+                            // {eachReservation.guest_id}
+                            // onChange={(e) => setGuest_id(e.target.value)}
+                        />
+                    <br/>
+                        <label>Room:</label>
+                        <input
+                            type="text"
+                            required
+                            value="2"
+                            // {eachReservation.room_id}
+                            // onChange={(e) => setRoom_id(e.target.value)}
+                        />
+                    <br/>
+                        <label>Arriving:</label>
+                        <input
+                            type="text"
+                            required
+                            // value={eachReservation.date_start}
+                            // onChange={(e) => setDate_start(e.target.value)}
+                        />
+                    <br/>
+                        <label>Checking Out:</label>
+                        <input
+                            type="text"
+                            required
+                            // value={eachReservation.date_end}
+                            // onChange={(e) => setDate_end(e.target.value)}
+                        />
+                    <br/>
+                        <input type="submit" value="Submit"/>
+                        {/* { !isPending &&<button>Submit</button>}
+                        { isPending &&<button disabled>Confirming Reservation...</button>} */}
+                    </form>
+                </div>
+            {/* );})} */}
         </div>
     );
 }

@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Header from './Components/Header';
 import About from './Components/About';
 import Reservations from './Components/Reservations';
+import ReservationCard from './Components/ReservationCard';
 import Rooms from './Components/Rooms';
 import RoomCard from './Components/RoomCard';
 import AroundTown from './Components/AroundTown.js';
@@ -48,7 +49,8 @@ function App() {
           <Route path='/around_town' element={<AroundTown />} />
           <Route path='/rooms' element={<Rooms rooms={rooms}/>} />
           <Route path='/room_card' element={<RoomCard />} />
-          <Route path='/reservations' element={<Reservations reservations={reservations}/>} />     
+          <Route path='/reservations' element={<Reservations reservations={reservations}/>} />
+          <Route path='/reservation_card' element={<ReservationCard/>} />     
       </Routes>
     </div>
   );

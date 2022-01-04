@@ -87,7 +87,6 @@ h2 {
   font-size: calc(8px + 2vmin);
   font-weight: bold;
   background-color:#04D4F0;
-  /* opacity: 80%; */
   width: 90%;
   margin: 0 auto;
   padding: 10px;
@@ -114,31 +113,6 @@ li {
   margin-left: 2%;
 }
 
-.form-div {
-  text-align: left;
-  margin-left: 43%;
-  height: 175px;
-}
-
-label {
-  margin-right: 10px;
-}
-
-input[type=text]:focus {
-  background-color: lightblue;
-}
-
-input[type=button], input[type=submit], input[type=reset] {
-  background-color: #04D4F0;
-  border: solid, 1px, #021d4b;
-  color: #021d4b;
-  font-size: calc(8px + 2vmin);
-  font-weight: bold;
-  cursor: pointer;
-  margin-left: 80px;
-  margin-top: 40px;
-}
-
 table {
   color: #021d4b;
   font-size: calc(8px + 2vmin);
@@ -154,4 +128,34 @@ th, td {
   border: 2px solid #021d4b;
   padding: 25px;
   width: 140px;
+}
+
+form{
+  text-align: left;
+  margin-left: 42%;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #021d4b;
+  border: solid, 1px, #021d4b;
+  color: #04D4F0;
+  font-size: calc(8px + 2vmin);
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 80px;
+  margin-top: 40px;
+}
+
+button {
+  background-color: tomato;
+  float: right;
+  margin-right: 84px;
 }
