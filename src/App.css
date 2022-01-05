@@ -158,4 +158,5 @@ button {
   background-color: tomato;
   float: right;
   margin-right: 84px;
+  cursor: pointer;
 }

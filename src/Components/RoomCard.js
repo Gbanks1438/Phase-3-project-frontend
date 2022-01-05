@@ -1,4 +1,6 @@
-function RoomCard({aRoom}, {printEnsuite}) { 
+function RoomCard({aRoom}
+    // ,{printEnsuite}
+    ) { 
 // console.log(aRoom)
         return (
             <div>

@@ -1,8 +1,10 @@
-function ReservationCard({aReservation}, {}) { 
-    // console.log(aReservation)
+// import App from '../App';
+
+function ReservationCard({aReservation}, {cancelButtonClicked}) { 
+    console.log(cancelButtonClicked) //undefined
             return (
                 <div>
-                     <table>
+                    <table>
                         <thead>
                             <tr>
                                 <th>Hotel Number</th>
@@ -22,7 +24,11 @@ function ReservationCard({aReservation}, {}) {
                             </tr>
                         </tbody>
                     </table>
-                        <button>Cancel Reservation</button>
+                        <button 
+                            onClick={() => 
+                            cancelButtonClicked(aReservation)}>
+                                Cancel Reservation
+                        </button>
                     <br/>
                     <br/>
                 </div>

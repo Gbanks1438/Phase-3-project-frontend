@@ -8,12 +8,10 @@ import Reservations from './Components/Reservations';
 import ReservationCard from './Components/ReservationCard';
 import Rooms from './Components/Rooms';
 import RoomCard from './Components/RoomCard';
-import AroundTown from './Components/AroundTown.js';
+import AroundTown from './Components/AroundTown';
 
 function App() {
-
   const [ rooms, setRooms ] = useState( [] )
-  // console.log("Our Rooms ->", rooms)
     useEffect( 
       ()=>{        
         fetch("http://localhost:9292/rooms")
@@ -25,9 +23,8 @@ function App() {
         )
       }
     , [] )
-
-  const [ reservations, setReservations ] = useState( [] )
-  // console.log("Our Reservations ->", reservations)
+  
+    const [ reservations, setReservations ] = useState( [] )
     useEffect( 
       ()=>{        
         fetch("http://localhost:9292/reservations")
@@ -39,7 +36,17 @@ function App() {
         )
       }
     , [] )
-  
+    
+    function cancelButtonClicked(eachReservation) {
+      fetch("http://localhost:9292/reservations", 
+      { method: "DELETE" })
+      const filteredReservations = reservations.filter((aReservation) => {
+        return eachReservation.id !== aReservation.id
+      }
+      )
+      setReservations(filteredReservations);
+      }
+
   return (
     <div className="App">
       <Header />
@@ -50,10 +57,21 @@ function App() {
           <Route path='/rooms' element={<Rooms rooms={rooms}/>} />
           <Route path='/room_card' element={<RoomCard />} />
           <Route path='/reservations' element={<Reservations reservations={reservations}/>} />
-          <Route path='/reservation_card' element={<ReservationCard/>} />     
+          <Route path='/reservation_card' element={<ReservationCard cancelButtonClicked={cancelButtonClicked}/>} />     
       </Routes>
     </div>
   );
 }
 
 export default App;
+
+
+    //// For use if we add a calendar component in the future
+    // const removeReservation =(eachReservation)=>{  
+    //   const removeCar = reservations.filter(
+    //     (oneRes)=>{
+    //       return eachReservation.id !== oneRes.id
+    //     }
+    //   )
+    //   setReservations(removeRes)
+    // }
