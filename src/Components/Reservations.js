@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import ReservationCard from './ReservationCard';
 
-function Reservations({reservations}) {
+function Reservations({reservations, setReservations}) {
     // console.log("reservations: ", reservations)
 
     const [hotel_id, setHotel_id] = useState("1");
@@ -11,11 +11,10 @@ function Reservations({reservations}) {
     const [date_end, setDate_end] = useState("");
     // const [isPending, setIsPending] = useState(false);
 
-    const handleSubmit = (e) => {
+    const submitButtonClicked = (e) => {
 
         e.preventDefault();
         const newReservation = { hotel_id, guest_id, room_id, date_start, date_end };
-        // console.log(newReservation)
 
         // setIsPending(true);
 
@@ -25,8 +24,41 @@ function Reservations({reservations}) {
             body: JSON.stringify(newReservation)
         }).then(() => {
             console.log("Your reservation has been confirmed!");
+            setReservations([...reservations, newReservation])
             // setIsPending(false);
         })
+    }
+        // ,
+     
+     function cancelButtonClicked(reservation) {
+         console.log(`http://localhost:9292/reservations/${reservation.id}`)
+        fetch(`http://localhost:9292/reservations/${reservation.id}`,
+            {
+                method: "DELETE",
+            })
+            .then((r) => r.json())
+            .then((data) => 
+            setReservations(data)
+            );
+     }
+    
+      function updateButtonClicked(e) {
+        e.preventDefault();
+        fetch(`http://localhost:9292/reservations/${e.id}`, {
+         method: "PATCH",
+         headers: {
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify({
+          hotel_id: hotel_id,
+          guest_id: guest_id,
+          room_id: room_id,
+          date_start: date_start,
+          date_end: date_end
+          }),
+       })
+         .then((r) => r.json())
+         .then((updatedReservation) => setReservations(updatedReservation));
      }
 
     return (
@@ -39,7 +71,9 @@ function Reservations({reservations}) {
                          <div> 
                      <ReservationCard
                         key={eachReservation.id} // For React
-                        aReservation={eachReservation} // For Us
+                        eachReservation={eachReservation} // For Us
+                        cancelButtonClicked={cancelButtonClicked}
+                        updateButtonClicked={updateButtonClicked}
                         />
                         </div>  
                         )
@@ -50,7 +84,7 @@ function Reservations({reservations}) {
         <h2>Make A Reservation</h2>
             <br/>
                 <div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={submitButtonClicked}>
                         <label>Hotel:</label>
                         <input
                             placeholder="1"

@@ -1,4 +1,4 @@
-import logo from '/Users/greg/Development/coding/Mod3/phase-3-project-frontend/src/Images/Energy+Fox.png';
+import logo from '/Users/greg/Development/coding/Mod3/Phase-3-project-frontend/src/Images/Energy+Fox.png';
 
 function About() {
   
