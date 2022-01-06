@@ -22,9 +22,9 @@ function Reservations({reservations, setReservations}) {
             method: 'POST',
             headers: { "Content-Type": "application/json"},
             body: JSON.stringify(newReservation)
-        }).then(() => {
-            console.log("Your reservation has been confirmed!");
-            setReservations([...reservations, newReservation])
+        }).then(r => r.json()).then((returnedReservation) => {
+            console.log("Your reservation has been confirmed!", returnedReservation)
+            setReservations([...reservations, returnedReservation])
             // setIsPending(false);
         })
     }
@@ -37,9 +37,13 @@ function Reservations({reservations, setReservations}) {
                 method: "DELETE",
             })
             .then((r) => r.json())
-            .then((data) => 
-            setReservations(data)
-            );
+            .then((deletedReservation) => {
+               const filteredReservations = reservations.filter((eachReservation)=>{
+                 return (   eachReservation.id != deletedReservation.id )
+                })
+                console.log("What did we get? --> ", filteredReservations)
+                setReservations(filteredReservations)
+            })
      }
     
       function updateButtonClicked(e) {
