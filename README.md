@@ -1,3 +1,10 @@
+ABOUT:
+This app was a way for me to explore making an Airbnb style of app for my family members and friends to "time-share" a single vacation property. Users can schedule when they wish to use the vacation property to avoid conflicts with each other. The website is intended to also show details about the rooms and amenities, as well as available activities, and local businesses. The concept is to make planning a visit easy, even with a large group. My family owns a vacation property that I felt this idea could be applied to, so this was my first attempt at building a site for them. As I grow as a developer and strengthen my skills I hope to professionally build them a website to manage the property in real time.
+
+My frontend is built using Javascript and React V6 for the functionality, and I used HTML with vanilla CSS for the layout and styling. The information about the property and things to do around town are hard coded. There is no log-in security in this iteration of the website concept. I did not make a Monorepo for this project so the frontend and backend are separate repositories. This app is not hosted on Heroku currently. Please pull down a forked copy locally and use the instructions below to launch the website in your browser if you would like to see more details. 
+
+
+HOW TO USE:
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
